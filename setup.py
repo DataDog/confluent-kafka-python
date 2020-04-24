@@ -6,7 +6,7 @@ from distutils.core import Extension
 import platform
 
 work_dir = os.path.dirname(os.path.realpath(__file__))
-mod_dir = os.path.join(work_dir, 'confluent_kafka')
+mod_dir = os.path.join(work_dir, 'confluent_kafka_dd')
 ext_dir = os.path.join(mod_dir, 'src')
 
 INSTALL_REQUIRES = [
@@ -60,10 +60,10 @@ def get_install_requirements(path):
     ]
 
 
-setup(name='confluent-kafka',
+setup(name='confluent-kafka-dd',
       # Make sure to bump CFL_VERSION* in confluent_kafka/src/confluent_kafka.h
       # and version and release in docs/conf.py.
-      version='1.4.1',
+      version='1.4.1+dd.1',
       description='Confluent\'s Python client for Apache Kafka',
       author='Confluent Inc',
       author_email='support@confluent.io',
